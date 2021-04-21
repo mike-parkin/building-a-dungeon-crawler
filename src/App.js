@@ -1,9 +1,11 @@
 import React from 'react'
 
+import Player from './features/player'
+
 const App = () => {
   return (
     <div>
-      i'm empty
+      <Player />
     </div>
   )
 }
