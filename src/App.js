@@ -1,13 +1,11 @@
 import React from 'react'
 
-import Player from './features/player'
-import Map from './features/map'
+import World from './features/world'
 
 const App = () => {
   return (
     <div>
-      <Map />
-      <Player />
+      <World />
     </div>
   )
 }
