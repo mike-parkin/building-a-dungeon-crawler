@@ -3,9 +3,18 @@ import { SPRITE_SIZE } from '../../config/constants'
 
 export default function handleMovement(player) {
 
-    function getNewPostion(direction) {
-        const oldPos = store.getState().player.postion
-        return [ oldPos[0] - SPRITE_SIZE, oldPos[1]]
+    function getNewPosition(direction) {
+        const oldPos = store.getState().player.position
+        switch(direction) {
+            case 'WEST':
+                return [ oldPos[0] - SPRITE_SIZE, oldPos[1]]
+            case 'EAST':
+                return [ oldPos[0] + SPRITE_SIZE, oldPos[1]]
+            case 'NORTH':
+                return [ oldPos[0], oldPos[1] - SPRITE_SIZE]
+            case 'SOUTH':
+                return [ oldPos[0], oldPos[1] + SPRITE_SIZE]
+        }
     }
 
     function dispatchMove(direction) {
