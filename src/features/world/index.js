@@ -15,7 +15,7 @@ const World = (props) => {
                 margin: '20px auto'
             }}
         >
-            <Map tiles={tiles}/>
+            <Map tiles={tiles} />
             <Player />
         </div>
     )
