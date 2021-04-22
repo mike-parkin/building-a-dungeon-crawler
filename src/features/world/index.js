@@ -3,6 +3,8 @@ import React from 'react'
 import Map from '../map'
 import Player from '../player'
 
+import { tiles } from '../../data/map/1' 
+
 const World = (props) => {
     return (
         <div
@@ -13,7 +15,7 @@ const World = (props) => {
                 margin: '20px auto'
             }}
         >
-            <Map />
+            <Map tiles={tiles}/>
             <Player />
         </div>
     )
