@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import { SPRITE_SIZE } from '../../config/constants'
 
@@ -54,4 +55,10 @@ const Map = (props) => {
     )
 }
 
-export default Map
+const mapStateToProps = (state) => {
+    return {
+        tiles: state.map.tiles
+    }
+}
+
+export default connect(mapStateToProps)(Map)
