@@ -1,5 +1,11 @@
+.row {
+    height: 40px;
+}
+
 .tile {
     display: inline-flex;
+    margin-top: 0;
+    background-color: green;
 }
 
 .grass {
